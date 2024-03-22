@@ -1,0 +1,20 @@
+apiVersion: v1
+
+kind: Pod
+
+metadata:
+  name: nginx-pvc3
+
+spec:
+  volumes:
+    - name: monstorage
+      persistentVolumeClaim:
+        claimName: mon-pvc3
+  containers:
+    - name: nginx-pvc
+      image: nginx:latest
+      ports:
+        - containerPort: 80
+      volumeMounts:
+        - mountPath: "/usr/share/nginx/html"
+          name: monstorage

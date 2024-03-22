@@ -1,0 +1,21 @@
+apiVersion: v1
+
+kind: Pod
+
+metadata:
+  name: pod-nginx-debian
+  labels:
+    app: nginx
+    env: test
+
+spec:
+  containers:
+  - name: conteneur-nginx
+    image: nginx:latest
+    ports: 
+     - containerPort: 80
+
+  - name: conteneur-debian
+    image: debian
+    command: ["sleep", "600"]
+    

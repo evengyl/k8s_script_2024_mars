@@ -1,0 +1,12 @@
+apiVersion: v1
+
+kind: Pod
+
+metadata:
+  name: pod-nginx
+  namespace: monprojet1
+
+spec:
+  containers:
+  - name: container-nginx
+    image: nginx:latest

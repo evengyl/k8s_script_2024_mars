@@ -1,0 +1,22 @@
+apiVersion: v1
+
+kind: PersistentVolume
+
+metadata:
+  name: mon-pv3
+  labels:
+    type: local
+
+spec:
+  storageClassName: manual3
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/home/evengyl/data"
+
+
+    #ReadWriteOnce -> Monté sur un simple pod
+    #ReadOnlyMany -> montés sur plusieurs pods en lecture
+    #ReadWriteMany -> montés sur plusieurs pods en lecture et écriture

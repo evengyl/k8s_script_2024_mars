@@ -1,0 +1,14 @@
+apiVersion: v1
+
+kind: PersistentVolumeClaim
+
+metadata:
+  name: mon-pvc3
+
+spec:
+  storageClassName: manual3
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi

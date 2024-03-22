@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-angular
+  namespace: monprojet1
+  labels:
+    app: angular
+    pignouf: v2
+    env: pre-release
+
+spec:
+  containers:
+  - name: container-nginx
+    image: nginx:latest
+
+
+---
+
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-angular2
+  namespace: monprojet1
+  labels:
+    app: angular
+    pignouf: v8
+    env: acceptance
+
+spec:
+  containers:
+  - name: container-nginx
+    image: nginx:latest
